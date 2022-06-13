@@ -4,6 +4,7 @@ const path = require('path')
 const mongoose = require('mongoose');
 const Campground = require('./models/campground')
 const methodOverride = require('method-override')
+const ejsMate = require('ejs-mate')
 
 // import Database Connection;
 mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp');
@@ -15,6 +16,7 @@ db.once("open", () =>{
 });
 
 // Set View and view engine
+app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({extended: true}))
@@ -61,7 +63,9 @@ app.get('/campgrounds/:id/edit', async (req, res)=>{
     res.render('campgrounds/edit', {campground});
 })
 
-
+app.use((req, res)=>{
+    res.render('home')
+})
 
 
 app.listen(3000, ()=>{

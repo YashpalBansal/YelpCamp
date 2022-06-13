@@ -1,11 +1,11 @@
 # YelpCamp
 
-A nice project with a nice description
+A campground project
 
 ---
 ## Requirements
 
-For development, you will only need Node.js and a node global package, Yarn, installed in your environement.
+For development, you will only need Node.js and a node global package, mongodb, installed in your environement.
 
 ### Node
 - #### Node installation on Windows
@@ -34,6 +34,11 @@ If the installation was successful, you should be able to run the following comm
 If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
 
     $ npm install npm -g
+
+### MongoDB
+- #### MongoDB installation on Windows
+  You can find more information about the installation on the [official mongoDB website](https://www.mongodb.com/) or you can follow below link
+  https://zarkom.net/blogs/how-to-install-mongodb-for-development-in-windows-3328
 
 ###
 ### Nodemon installation
